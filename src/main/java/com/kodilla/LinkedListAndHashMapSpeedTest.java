@@ -72,7 +72,7 @@ class Tester
 		long begin2 = System.nanoTime();
 		
 		LinkedList<Book> listOfBooks = new LinkedList<Book>();
-		for(int i = 0; i < 700000; i++)
+		for(int i = 0; i < 7000000; i++)
 		{
 			radomizeName1 = (String.valueOf(capitalAlphabet.charAt(nameGenerator.nextInt(36))));
 			radomizeName2 = (String.valueOf(smallAlphabet.charAt(nameGenerator.nextInt(36))));
@@ -153,7 +153,7 @@ class Tester
 		begin2 = System.nanoTime();
 		
 		HashMap<Integer, Book> booksAsHashMap = new HashMap<Integer, Book>();
-		for(int n = 0; n < 700000; n++)
+		for(int n = 0; n < 7000000; n++)
 		{
 			radomizeName1 = (String.valueOf(capitalAlphabet.charAt(nameGenerator.nextInt(36))));
 			radomizeName2 = (String.valueOf(smallAlphabet.charAt(nameGenerator.nextInt(36))));
@@ -175,7 +175,7 @@ class Tester
 		
 		begin1 = System.currentTimeMillis();
 		begin2 = System.nanoTime();
-		int randomNumberToSearch = nameGenerator.nextInt(700000);
+		int randomNumberToSearch = nameGenerator.nextInt(7000000);
 		booksAsHashMap.get(randomNumberToSearch);
 		end1 = System.currentTimeMillis();
 		end2 = System.nanoTime();
@@ -193,7 +193,7 @@ class Tester
 		
 		begin1 = System.currentTimeMillis();
 		begin2 = System.nanoTime();
-		int randomNumberToSearch2 = nameGenerator.nextInt(700000);
+		int randomNumberToSearch2 = nameGenerator.nextInt(7000000);
 		booksAsHashMap.get(randomNumberToSearch2);
 		end1 = System.currentTimeMillis();
 		end2 = System.nanoTime();
@@ -211,7 +211,7 @@ class Tester
 		
 		begin1 = System.currentTimeMillis();
 		begin2 = System.nanoTime();
-		Integer randomNumberToPut1 = nameGenerator.nextInt(20000000);
+		Integer randomNumberToPut1 = nameGenerator.nextInt(200000000);
 		booksAsHashMap.put(randomNumberToPut1, new Book("Michael " + "Fletcher", "Odys and something something"));
 		end1 = System.currentTimeMillis();
 		end2 = System.nanoTime();
@@ -221,7 +221,7 @@ class Tester
 		
 		begin1 = System.currentTimeMillis();
 		begin2 = System.nanoTime();
-		Integer randomNumberToPut2 = nameGenerator.nextInt(20000000);
+		Integer randomNumberToPut2 = nameGenerator.nextInt(200000000);
 		booksAsHashMap.put(randomNumberToPut2, new Book("Anna " + "Tristian", "Really boring story"));
 		end1 = System.currentTimeMillis();
 		end2 = System.nanoTime();
